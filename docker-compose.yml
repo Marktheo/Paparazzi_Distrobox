@@ -1,0 +1,17 @@
+version: '1'
+services:
+	pprz:
+		container_name: pprz-dckr
+		image: ghcr.io/Marktheo/Paparazi_Docker:pprz
+		privileged: true
+		pull_policy: always
+		environment:
+			- DISPLAY=${DISPLAY} 
+		volumes:
+			- ./paparazzi:/root/paparazzi
+			- /tmp/.X11-unix:/tmp/.X11-unix
+			- /etc/localtime:/etc/localtime
+			- /dev:/dev
+		network_mode: host
+		stdin_open: true
+		tty: true
