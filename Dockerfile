@@ -1,16 +1,25 @@
 # Choosing Base OS
 FROM ubuntu:focal
 
+# Configuring Time Zone
+ENV TZ=America/Sao_Paulo
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Configuring Directories
+WORKDIR /root/
+
+COPY . /root/
+
 # Installing Paparazi AUV Autopilot Dependencies
-RUN apt update && apt install -y python-is-python3 gcc-arm-none-eabi gdb-multiarch git
+RUN apt update && apt install -y python-is-python3 gcc-arm-none-eabi gdb-multiarch git software-properties-common
 
 # Installing Paparazzi UAV Autopilot Packages and Resources
 RUN apt update && add-apt-repository -y ppa:paparazzi-uav/ppa
 
-RUN sudo apt update && apt install -y paparazzi-dev paparazzi-jsbsim dfu-util pprzgcs 
+RUN apt update && apt install -y paparazzi-dev paparazzi-jsbsim dfu-util pprzgcs 
 
 # Building Paparazzi UAV Autopilot
-
 CMD ["cd", "~"]
 
 CMD ["git", "clone", "--origin", "upstream", "https://github.com/paparazzi/paparazzi.git"]
