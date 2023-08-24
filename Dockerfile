@@ -3,12 +3,11 @@ FROM ubuntu:focal
 
 # Configuring Time Zone
 ENV TZ=America/Sao_Paulo
-
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Configuring Directories
 WORKDIR /root/
-
 COPY . /root/
 
 # Installing Paparazi AUV Autopilot Dependencies
@@ -16,7 +15,6 @@ RUN apt update && apt install -y python-is-python3 gcc-arm-none-eabi gdb-multiar
 
 # Installing Paparazzi UAV Autopilot Packages and Resources
 RUN apt update && add-apt-repository -y ppa:paparazzi-uav/ppa
-
 RUN apt update && apt install -y paparazzi-dev paparazzi-jsbsim dfu-util pprzgcs 
 
 # Building Paparazzi UAV Autopilot
