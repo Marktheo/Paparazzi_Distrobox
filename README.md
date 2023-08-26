@@ -42,7 +42,8 @@
 > Choose a folder to clone the system repository. 
 > - Execute: ```git clone --origin upstream https://github.com/paparazzi/paparazzi.git```
 > <br><br>
-> Open the cloned repository.
+> - Execute: ```cd ./paparazzi```
+> <br><br>
 > - Execute: ```git remote update -p```
 > <br><br>
 > - Execute: ```sudo cp conf/system/udev/rules/*.rules /etc/udev/rules.d/```
@@ -55,5 +56,4 @@
 
 > ## Paparazzi UAV Launch
 > Still in the cloned repository,
-> - Execute: ```./paparazzi```
 > - Execute: ```./paparazzi```
