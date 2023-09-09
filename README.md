@@ -1,14 +1,14 @@
 # Paparazzi Distrobox
 
-> ## Description
-> This repository is dedicated for making Paparazzi UAV System executable on any Linux distribution.
+## Description
+    This repository is dedicated for making Paparazzi UAV System executable on any Linux distribution.
 
 <br>
 
-> ## Distrobox Dependencies
-> - For Debian/Ubuntu-based distributions: ```Docker``` and ```Wget```
-> <br><br>
-> - For other distributions (ArchLinux, Fedora): ```Podman``` and ```Curl```
+## Distrobox Dependencies
+    - For Debian/Ubuntu-based distributions: ```Docker``` and ```Wget```
+    
+    - For other distributions (ArchLinux, Fedora): ```Podman``` and ```Curl```
 
 <br>
 
