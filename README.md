@@ -1,7 +1,7 @@
 # Paparazzi Distrobox
 
 ## Description
-    This repository is dedicated for making Paparazzi UAV System executable on any Linux distribution.
+    This repository is dedicated for making Paparazzi UAV System executable on any Linux distro.
 
 <br>
 
