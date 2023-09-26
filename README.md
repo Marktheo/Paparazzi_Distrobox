@@ -18,9 +18,9 @@
 <br>
 
 > ## Distrobox Setup and Run
-> - Execute: ```distrobox create --name pprz-uav --image ubuntu:focal```
+> - Execute: ```distrobox create --name pprz --image ubuntu:20.04```
 > <br><br>
-> - Execute: ```distrobox enter pprz-uav```
+> - Execute: ```distrobox enter pprz```
 
 <br>
 
